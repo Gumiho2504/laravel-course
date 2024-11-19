@@ -1,5 +1,5 @@
-{{--@extends('layouts.app')--}}
-{{--@section('title','Home Page')--}}
+{{-- @extends('layouts.app') --}}
+{{-- @section('title', 'Home Page') --}}
 <x-app-layout title="Home">
     <!-- Home Slider -->
     <section class="hero-slider">
@@ -51,38 +51,18 @@
                 </div>
             </div>
             <button type="button" class="hero-slide-prev">
-                <svg
-                    style="width: 18px"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 1 1 5l4 4"
-                    />
+                <svg style="width: 18px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
                 </svg>
                 <span class="sr-only">Previous</span>
             </button>
             <button type="button" class="hero-slide-next">
-                <svg
-                    style="width: 18px"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                >
-                    <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="m1 9 4-4-4-4"
-                    />
+                <svg style="width: 18px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
                 </svg>
                 <span class="sr-only">Next</span>
             </button>
@@ -95,9 +75,9 @@
             <div class="container">
                 <h2>Latest Added Cars</h2>
                 <div class="car-items-listing">
-                    @for($i=0;$i<12;$i++)
-                        <x-car-item/>
-                    @endfor
+                    @foreach ($cars as $car)
+                        <x-car-item :$car />
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -106,20 +86,3 @@
 
 
 </x-app-layout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
