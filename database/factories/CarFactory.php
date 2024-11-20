@@ -9,7 +9,6 @@ use App\Models\Maker;
 use App\Models\Model;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
 use Illuminate\Support\Str;
 
 /**
@@ -17,11 +16,7 @@ use Illuminate\Support\Str;
  */
 class CarFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+
     public function definition(): array
     {
         $maker = Maker::inRandomOrder()->first();

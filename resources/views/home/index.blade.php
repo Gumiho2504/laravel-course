@@ -68,6 +68,7 @@
             </button>
         </div>
     </section>
+    <x-search-form></x-search-form>
     <!-- Home Slider -->
     <main>
         <!-- New Cars -->
@@ -76,7 +77,7 @@
                 <h2>Latest Added Cars</h2>
                 <div class="car-items-listing">
                     @foreach ($cars as $car)
-                        <x-car-item :$car />
+                        <x-car-item :$car :isInWatchList="true" />
                     @endforeach
                 </div>
             </div>

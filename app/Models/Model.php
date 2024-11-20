@@ -11,13 +11,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Model extends Eloquent
 {
     use HasFactory;
-    protected $fillable = ['name','maker_id'];
+    protected $fillable = ['name', 'maker_id'];
     const UPDATED_AT = null;
     const CREATED_AT = null;
-    public function maker(): BelongsTo{
+    public function maker(): BelongsTo
+    {
         return $this->belongsTo(Maker::class);
     }
-    public function cars():HasMany{
+    public function cars(): HasMany
+    {
         return $this->hasMany(Car::class);
     }
 }
