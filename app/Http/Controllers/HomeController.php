@@ -19,6 +19,7 @@ class HomeController extends Controller
 {
         public function index()
         {
+            return Car::get();
                 //        $car = Car::find(1);
                 //        $car->features->abs = 0;
                 //        dump($car->features,$car->primaryImage);
